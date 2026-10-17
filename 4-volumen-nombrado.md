@@ -77,7 +77,7 @@ docker run -d --name server-drupal --publish published=9700,target=80 -v vol-mod
 _La instalación puede tomar varios minutos, mientras espera realice un diagrama de los contenedores que ha creado en este apartado._
 
 ### Diagrama
-![Imagen](ejercicio4_diagrama.png)
+![Imagen](ejercicio4_diagrama_contenedores.png)
 
 
 ### Eliminar un volumen específico
