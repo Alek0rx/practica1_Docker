@@ -7,7 +7,7 @@ docker network create net-wp
 ```
 
 ### Para que persista la información es necesario conocer en dónde mysql almacena la información.
-En el esquema del ejercicio carpeta del contenedor (a) es /var/lib/mysql
+En el esquema del ejercicio la carpeta del contenedor (a) es /var/lib/mysql
 
 Ruta carpeta host: .../ejercicio3/db
 
