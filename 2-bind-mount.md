@@ -16,22 +16,25 @@ docker run -d --name <nombre contenedor> --mount type=bind,source=<ruta carpeta 
 
 ### Crear un contenedor con la imagen nginx:alpine, mapear todos por puertos, para la ruta carpeta host colocar el directorio en donde se encuentra la carpeta html en tu computador y para la ruta carpeta contenedor: /usr/share/nginx/html (esta ruta se obtiene al revisar la documentación de la imagen)
 ![Volúmenes](volumen-host.PNG)
-# COMPLETAR CON EL COMANDO
+```
+docker run -d --name nginx -P -v C:\Users\josu\Desktop\practicas_const\practica1_Docker\nginx\html:/usr/share/nginx/html nginx:alpine
+```
 
 ### ¿Qué sucede al ingresar al servidor de nginx?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+Al ingresar mediante el navegador se obtiene un código de estado 403 (Forbidden) debido a que no hay archivos en el directorio ../nginx/html del host.
 
 ### ¿Qué pasa con el archivo index.html del contenedor?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+El archivo index.html que viene por defecto queda sobrescrito por el bind mount.
 
 ### Ir a https://html5up.net/ y descargar un template gratuito, descomprirlo dentro de tu computador en la carpeta html
 ### ¿Qué sucede al ingresar al servidor de nginx?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+El servidor muestra una página web con el template descargado. Esto evidencia la funcionalidad de volumen.
 
 ### Eliminar el contenedor
-# COMPLETAR CON EL COMANDO
+```
+docker stop nginx; docker rm nginx
+```
 
 ### ¿Qué sucede al crear nuevamente un contenedor montado al directorio definidos anteriormente?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
-
+El servidor muestra la misma página web, debido a que se lo montó en el mismo directorio del host (persistencia de datos).
 
